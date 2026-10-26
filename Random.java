@@ -1,16 +1,16 @@
 static void main() {
 
-    int diceMin = 6;
-    int diceMax = 20;
-    int diceSites = (diceMax + 1) - diceMin;
+    int diceFirstNumber = 6;
+    int diceSecondNumber = 1;
+    int diceSites;
 
-    int diceRoll = (int)(diceSites * Math.random() + diceMin);
-
-    while (diceRoll < 20) {
-        diceRoll = (int)(diceSites * Math.random() + diceMin);
-    
+    if (diceFirstNumber < diceSecondNumber) {
+        diceSites = (diceSecondNumber + 1) - diceFirstNumber;
+        int diceRoll = (int)(diceSites * Math.random() + diceFirstNumber);
+        System.out.println(diceRoll); 
+    } else {
+        diceSites = (diceFirstNumber + 1) - diceSecondNumber;
+        int diceRoll = (int)(diceSites * Math.random() + diceSecondNumber);
         System.out.println(diceRoll);
     }
-
-    System.out.println("Geschafft!");
 }
