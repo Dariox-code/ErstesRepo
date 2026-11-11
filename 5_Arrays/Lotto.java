@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 static int RandomNumber(int m) {
     return (int)((m * Math.random()) + 1);
 }
@@ -32,7 +30,6 @@ static void main() {
     int SizeDraw = 49;
 
     int[] LottoDraw = ziehung(AmountDraw, SizeDraw);
-    Arrays.sort(LottoDraw); //sorting array in ascending order
     System.out.print("[");
     for (int zahlen: LottoDraw) {
         System.out.print(zahlen);
